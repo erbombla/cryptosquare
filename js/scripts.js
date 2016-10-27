@@ -24,3 +24,11 @@ function rot13(encodedStr) {
 
   return decodedArr.join("");
 }
+
+//user interface
+$(document).ready(function(){
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $("#output").append("<p>" + rot13($("#input").val())+ "</p>");
+    });
+});
